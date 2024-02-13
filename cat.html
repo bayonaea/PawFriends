@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawFriends</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <a href="index.html" class="logo"><i class="fas fa-bone"></i>PawFriends</a>
+
+    <nav class="navbar">
+        <a href="#" onclick="goToHome()">Home</a>
+        <a href="#" onclick="goToCategory()">Category</a>
+        <a href="#" onclick="goToProducts()">Products</a>
+        <a href="#" onclick="goToServices()">Services</a>
+        <a href="#" onclick="goToContact()">Contact</a>
+    </nav>
+    
+    <div class="icons">
+        <i class="fas fa-search" id="search-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <a href="#" onclick="toggleCartPopup()" class="fas fa-shopping-cart"></a>
+
+    </div>
+    <!-- Add this div for the cart popup -->
+<div id="cartPopup" class="popup">
+    <h2>Your Cart</h2>
+    <!-- Cart items will be displayed here -->
+
+    <div id="cartItems"></div>
+    <button class="btn" onclick="checkout()">Checkout</button>
+    <button class="close-btn" onclick="hidePopup('cartPopup')">Close</button>
+
+</div>
+    
+    <form action="" id="search-box">
+        <input type="search" id="search" placeholder="search here">
+        <label for="search" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home" style="display: none;">
+
+    <div class="content">
+        <span>Up to 50% off</span>
+        <h3>We care about <br> your pet!</h3>
+        <a href="#category" class="btn">Get started</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+    <button onclick="showDivs()" style="display: none">Show Divs</button>
+<div class="row g-5">
+    <div class="col-md-6">
+        <div class="service-item bg-light d-flex p-4">
+            <i class="flaticon-house display-1 text-primary me-4"></i>
+            <div>
+                
+</section>
+
+<!-- category section ends -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <i class="fas fa-paw"></i> Our Cat products <i class="fas fa-paw"></i> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="price">₱300</div>
+            <img src="dog food-1.png" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Pedigree</h3>
+                <p>We prioritize your dog's health and happiness.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Pedigree', 300, 'dog food-1.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="price">₱500</div>
+            <img src="cat food-1.jpg" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Royal Canin</h3>
+                <p>Our collection includes a variety of options, from premium dry kibble to nourishing wet food, all crafted with your cat's well-being in mind.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Royal Canin', 500, 'cat food-1.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="price">₱300</div>
+            <img src="dog food-1.png" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Pedigree</h3>
+                <p>We prioritize your dog's health and happiness.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Pedigree', 300, 'dog food-1.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="price">₱500</div>
+            <img src="cat food-1.jpg" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Royal Canin</h3>
+                <p>Our collection includes a variety of options, from premium dry kibble to nourishing wet food, all crafted with your cat's well-being in mind.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Royal Canin', 500, 'cat food-1.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="price">₱300</div>
+            <img src="dog food-1.png" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Pedigree</h3>
+                <p>We prioritize your dog's health and happiness.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Pedigree', 300, 'dog food-1.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="price">₱500</div>
+            <img src="cat food-1.jpg" alt="">
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Royal Canin</h3>
+                <p>Our collection includes a variety of options, from premium dry kibble to nourishing wet food, all crafted with your cat's well-being in mind.</p>
+                <button class="btn add-to-cart" onclick="addToCart('Royal Canin', 500, 'cat food-1.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer" id="contact">
+    <div class="column">
+        <section class="about-us">
+            <h2> About Us </h2>
+            <p>PawFriends is your trusted partner for all your pet needs. We are dedicated to providing high-quality products and services to ensure the well-being of your furry friends. Our mission is to create lasting relationships with our customers by delivering exceptional value and customer service. At PawFriends, we pride ourselves on being more than just a pet store – we're your dedicated partner in ensuring the health and happiness of your beloved furry companions. With a deep-rooted commitment to excellence, we go above and beyond to offer an extensive range of premium products and top-notch services tailored to meet the unique needs of every pet and pet owner.
+
+Our mission is simple yet profound: to forge enduring relationships with our valued customers by consistently delivering exceptional value and unmatched customer service. Whether you're seeking the perfect nutritious food for your canine companion, the coziest bed for your feline friend, or expert advice on pet care, PawFriends is here to guide you every step of the way.
+
+As pet enthusiasts ourselves, we understand the profound bond between pets and their owners, and we're dedicated to nurturing and enhancing this bond through our unparalleled dedication to quality and reliability. With PawFriends, you can rest assured that your pet's well-being is our top priority, and we'll stop at nothing to ensure that they lead happy, healthy lives.
+
+Join us on this journey of pet parenthood, where every wag of the tail, purr of contentment, and joyful bark is celebrated and cherished. Experience the PawFriends difference today, and let us be your trusted companion in providing the best for your furry friends.</p>
+        </section>
+    <br>
+    <div class="column">
+        <!-- PawFriends Information -->
+        <section class="pawfriends-info">
+            <h2>Information</h2>
+            <ul>            
+    <li><a href="https://maps.app.goo.gl/rgQARBeGvJZFEUFF7" target="_blank" style="color:blue;">Location</a></li> 
+    <li><a href="#" onclick="showRefundPopup()">Read Refund Policy</a></li>
+    <div id="refundPopup" class="popup">
+
+    <h2>PAW FRIENDS Refund Policy</h2>
+        <p><strong>Effective Date:</strong> 02/13/2024</p>
+        <p>Thank you for choosing PAW FRIENDS for your [product/service] needs. We strive to provide high-quality products/services and ensure customer satisfaction. Please read our refund policy carefully to understand your rights and responsibilities when requesting a refund.</p>
+
+        <h3>Refund Eligibility:</h3>
+        <ul>
+            <li>We offer refunds on [physical products/digital products/services] within [number of days] days of the purchase date.</li>
+            <li>To be eligible for a refund, your [product/service] must be unused, in the same condition that you received it, and in the original packaging.</li>
+        </ul>
+
+        <h3>Non-Refundable Items:</h3>
+        <p>Certain [physical products/digital products/services] are non-refundable. These include, but are not limited to, [specific items/services]. Please check the product/service description carefully before making a purchase.</p>
+
+        <h3>Refund Process:</h3>
+        <ul>
+            <li>To request a refund, please contact our customer support team at [customer support email] or [customer support phone number].</li>
+            <li>Provide your order number, the reason for the refund request, and any supporting documentation if applicable.</li>
+            <li>Our team will review your request and respond within [number of days] business days.</li>
+        </ul>
+
+        <h3>Refund Approval:</h3>
+        <ul>
+            <li>If your refund request is approved, we will initiate the refund process.</li>
+            <li>Refunds will be issued to the original payment method used for the purchase.</li>
+        </ul>
+
+        <h3>Late or Missing Refunds:</h3>
+        <ul>
+            <li>If you haven’t received a refund within [number of days] days after approval, please check your bank account first.</li>
+            <li>Contact your credit card company or bank, as processing times may vary.</li>
+            <li>If the issue persists, please contact our customer support team for assistance.</li>
+        </ul>
+
+        <h3>Exchanges:</h3>
+        <p>We do not offer exchanges. If you need a different [product/service], please place a new order and follow the refund process for the original order.</p>
+
+        <h3>Shipping Costs:</h3>
+        <p>Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>
+
+        <h3>Changes to This Policy:</h3>
+        <p>We reserve the right to modify this refund policy at any time. Any changes will be effective immediately upon posting on our website.</p>
+
+        <p>By making a purchase with PAW FRIENDS, you acknowledge that you have read and agree to our refund policy.</p>
+
+        <p>If you have any questions or concerns regarding our refund policy, please contact us at [customer support email] or [customer support phone number].</p>
+
+        <p>Thank you for choosing PAW FRIENDS.</p>
+    <button class="close-btn" onclick="hidePopup('refundPopup')">Close</button>
+    </div>
+
+    <li><a href="#" onclick="showPrivacyPopup()">Privacy Policy</a></li>
+    <li><a href="#" onclick="showTermsPopup()"> Terms of Service</a></li>
+</ul>
+    <div id="privacyPopup" class="popup">
+    <h2>Privacy Policy</h2>
+    <!-- Privacy policy content -->
+    <h2>PAW FRIENDS Privacy Policy</h2>
+        <p><strong>Effective Date:</strong> [02/13/2024]</p>
+
+        <h3>1. Information We Collect</h3>
+        <p><strong>Personal Information:</strong> We may collect personal information, including but not limited to [list types of personal information collected].</p>
+        <p><strong>Non-Personal Information:</strong> We may also collect non-personal information such as [list examples of non-personal information].</p>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the collected information for [describe purposes, e.g., processing orders, improving our services, marketing].</p>
+        <p>Your information will not be shared with third parties except [mention circumstances, e.g., for processing payments, with your consent].</p>
+
+        <h3>3. Cookies</h3>
+        <p>We use cookies to [explain the purpose, e.g., enhance user experience, analyze website traffic].</p>
+        <p>You can manage your cookie preferences through [provide information on how to manage cookies].</p>
+
+        <h3>4. Security</h3>
+        <p>We take reasonable measures to protect your information from unauthorized access or disclosure.</p>
+        <p>However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+
+        <h3>5. Your Choices</h3>
+        <p>You have the right to [list rights, e.g., access, correct, delete] your personal information.</p>
+        <p>To exercise these rights or for inquiries, contact us at [contact email/phone].</p>
+
+        <h3>6. Changes to This Policy</h3>
+        <p>We reserve the right to update our Privacy Policy. Changes will be effective upon posting on our website.</p>
+    <button class="close-btn" onclick="hidePopup('privacyPopup')">Close</button>
+    </div>
+
+    <div id="termsPopup" class="popup">
+    <h2>Terms of Service</h2>
+    <!-- Terms of service content -->
+    <h2>PAW FRIENDS Terms and Conditions</h2>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By accessing or using PAW FRIENDS, you agree to comply with these Terms and Conditions.</p>
+
+        <h3>2. Use of Our Services</h3>
+        <p>You agree to use our services [responsibly, lawfully, etc.] and not engage in [list prohibited activities, e.g., unauthorized access, data mining].</p>
+
+        <h3>3. Intellectual Property</h3>
+        <p>All content on PAW FRIENDS is the property of PAW FRIENDS. Unauthorized use is prohibited.</p>
+
+        <h3>4. Limitation of Liability</h3>
+        <p>PAW FRIENDS is not liable for [list limitations, e.g., indirect, incidental, consequential] damages.</p>
+
+        <h3>5. Governing Law</h3>
+        <p>These Terms and Conditions are governed by the laws of [Your Jurisdiction].</p>
+
+        <h3>6. Changes to Terms</h3>
+        <p>We reserve the right to modify these Terms and Conditions at any time. Changes are effective upon posting.</p>
+
+        <p>If you have questions or concerns regarding our Privacy Policy or Terms and Conditions, contact us at [contact email/phone].</p>
+
+        <p>Thank you for choosing PAW FRIENDS.</p>
+    <button class="close-btn" onclick="hidePopup('termsPopup')">Close</button>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="hideOverlay()"></div>
+    <br>
+    <br>
+
+    </section>
+    <section class="social-media-links">
+        <h2> Social Media </h2>
+        <div class="share">
+            <a href="https://www.facebook.com/pawfriendswebsite/" target="_blank" class="btn">
+                <i class="fab fa-facebook-f" style="margin-top: 15px;"></i>
+            </a>
+            <a href="https://www.instagram.com/pawfriendswebsite/" target="_blank" class="btn">
+                <i class="fab fa-instagram" style="margin-top: 15px;"></i>
+            </a>
+        </div>
+    </section>
+   
+    
+    <b> <p class="footer-paragraph">&copy; 2024 PawFriends. All rights reserved.</p> </b>
+
+</footer>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+   $(document).ready(function(){
+
+$('#search-icon').click(function(){
+  $(this).toggleClass('fa-times');
+  $('#search-box').toggleClass('active');
+});
+
+$('#menu').click(function(){
+  $(this).toggleClass('fa-times');
+  $('.navbar').toggleClass('nav-toggle');
+});
+
+$(window).on('scroll load', function(){
+  $('#search-icon').removeClass('fa-times');
+  $('#search-box').removeClass('active');
+  $('#menu').removeClass('fa-times');
+  $('.navbar').removeClass('nav-toggle');
+
+  if($(window).scrollTop() > 0){
+    $('header').addClass('sticky');
+  } else {
+    $('header').removeClass('sticky');
+  }
+});
+
+$('a[href*="#"]').on('click', function(e){
+  e.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: $($(this).attr('href')).offset().top,
+  }, 500, 'linear');
+});
+
+$('#search').on('input', function() {
+  const searchTerm = $(this).val().toLowerCase();
+  highlightMatches(searchTerm);
+});
+
+function highlightMatches(searchTerm) {
+  $('.box').each(function() {
+    const productTitle = $(this).find('h3');
+    const titleText = productTitle.text().toLowerCase();
+    const startIndex = titleText.indexOf(searchTerm);
+
+    
+
+    const isVisible = startIndex !== -1;
+    $(this).toggle(isVisible);
+  });
+}
+
+});
+     // Get references to all buttons
+    var buttons = document.querySelectorAll('button');
+
+    // Add click event listeners to each button
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Get the target div id from the data-target attribute
+        var targetDivId = button.getAttribute('data-target');
+        
+        // Get the corresponding div
+        var targetDiv = document.getElementById(targetDivId);
+
+        // Toggle the display of the div
+        targetDiv.style.display = (targetDiv.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+    
+    function toggleDivs() {
+        var divs = document.querySelectorAll('.hiddenDiv');}
+
+        divs.forEach(function(div) {
+            if (div.style.display === 'none') {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        });
+function showRefundPopup() {
+    document.getElementById("refundPopup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    document.body.style.overflow = 'hidden'; // Disable scrolling of the main content
+}
+
+function showPrivacyPopup() {
+    document.getElementById("privacyPopup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    document.body.style.overflow = 'hidden'; // Disable scrolling of the main content
+}
+
+function showTermsPopup() {
+    document.getElementById("termsPopup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    document.body.style.overflow = 'hidden'; // Disable scrolling of the main content
+}
+
+function hidePopup(popupId) {
+    document.getElementById(popupId).style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    document.body.style.overflow = 'auto'; // Enable scrolling of the main content
+}
+function openPopup(event) {
+        event.preventDefault();
+        var url = event.target.href;
+        var width = 600;
+        var height = 400;
+        var leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+        var topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+        window.open(url, '_blank', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + topPosition + ', left=' + leftPosition);
+    }
+function hideOverlay() {
+    hideAllPopups();
+}
+
+document.getElementById("overlay").addEventListener("click", function() {
+    hideOverlay();
+});
+
+function hideAllPopups() {
+    document.querySelectorAll(".popup").forEach(function(popup) {
+        popup.style.display = "none";
+    });
+    document.getElementById("overlay").style.display = "none";
+    document.body.style.overflow = 'auto'; // Enable scrolling of the main content
+}
+// Function to toggle the cart popup
+function toggleCartPopup() {
+    var cartIcon = document.querySelector('.icons .fa-shopping-cart');
+    var cartPopup = document.getElementById("cartPopup");
+    var overlay = document.getElementById("overlay");
+    
+    if (cartPopup.style.display === "block") {
+        cartPopup.style.display = "none";
+        overlay.style.display = "none";
+        document.body.style.overflow = 'auto'; // Enable scrolling of the main content
+    } else {
+        cartPopup.style.display = "block";
+        overlay.style.display = "block";
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main content
+        updateCartItems();
+        
+        // Add the 'clicked' class to initiate the animation
+        cartIcon.classList.add('clicked');
+        
+        // Remove the 'clicked' class after the animation ends
+        setTimeout(function() {
+            cartIcon.classList.remove('clicked');
+        }, 500); // Adjust the duration of the animation (0.5s in this case)
+    }
+}
+
+
+// Add event listener to the cart icon to toggle the cart popup
+document.querySelector('.icons .fa-shopping-cart').addEventListener('click', toggleCartPopup);
+
+// Function to add items to the cart
+function addToCart(itemName, itemPrice, itemImage) {
+    // Get the existing cart items from local storage or initialize an empty array
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Check if the item already exists in the cart
+    var existingItem = cart.find(item => item.name === itemName);
+    
+    if (existingItem) {
+        // If the item already exists, increment its quantity
+        existingItem.quantity++;
+    } else {
+        // If the item does not exist, create a new item object
+        var newItem = {
+            name: itemName,
+            price: itemPrice,
+            image: itemImage,
+            quantity: 1 // Add quantity property to newItem
+        };
+        // Add the new item to the cart array
+        cart.push(newItem);
+    }
+    
+    // Save the updated cart back to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update the cart popup to display the new item
+    updateCartItems();
+}
+
+
+// Function to update the cart popup with the added items and calculate total
+function updateCartItems() {
+    var cartItemsHtml = "";
+    var cartTotal = 0; // Initialize total variable
+    var cartCount = 0; // Initialize count variable
+    
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        cartItemsHtml = "<div>There's nothing in your cart!</div>";
+    } else {
+        cart.forEach(function(item, index) { // Add index parameter
+            var itemQuantity = item.quantity > 1 ? ` x${item.quantity}` : ''; // Show quantity if greater than 1
+            cartItemsHtml += `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;">
+                    <div>${item.name}${itemQuantity} - ${item.price}</div>
+                    <button class="decrease-button" onclick="decreaseQuantity(${index})">-</button> <!-- Decrease button -->
+                    <button class="increase-button" onclick="increaseQuantity(${index})">+</button> <!-- Increase button -->
+                    <button class="delete-button" onclick="removeItemFromCart(${index})">X</button> <!-- Delete button -->
+                </div>`;
+            // Add item price multiplied by quantity to total
+            cartTotal += parseFloat(item.price) * item.quantity;
+            // Increment count by item quantity
+            cartCount += item.quantity;
+        });
+    }
+    
+    // Display total in cart
+    cartItemsHtml += `<div>Total: PHP${cartTotal.toFixed(2)}</div>`;
+    // Update notification bubble
+    document.getElementById("cartCount").innerText = cartCount;
+    
+    document.getElementById("cartItems").innerHTML = cartItemsHtml;
+}
+
+// Function to group items by name and calculate total quantity
+function groupItems(cart) {
+    var groupedItems = [];
+    cart.forEach(function(item) {
+        var existingItem = groupedItems.find(i => i.name === item.name);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            groupedItems.push({ ...item, quantity: 1 });
+        }
+    });
+    return groupedItems;
+}
+
+// Function to remove item from cart
+function removeItemFromCart(index) {
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); // Remove item at the specified index
+    localStorage.setItem('cart', JSON.stringify(cart)); // Update cart in local storage
+    updateCartItems(); // Update cart popup
+}
+
+// Function to decrease item quantity in cart
+function decreaseQuantity(index) {
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--; // Decrease quantity by 1
+        localStorage.setItem('cart', JSON.stringify(cart)); // Update cart in local storage
+        updateCartItems(); // Update cart popup
+    }
+}
+
+// Function to increase item quantity in cart
+function increaseQuantity(index) {
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart[index].quantity++; // Increase quantity by 1
+    localStorage.setItem('cart', JSON.stringify(cart)); // Update cart in local storage
+    updateCartItems(); // Update cart popup
+}
+
+// Function to handle checkout
+function checkout() {
+    // Remove all items from the cart
+    localStorage.removeItem('cart');
+    
+    // Update the cart popup to reflect the empty cart
+    updateCartItems();
+    
+    // Display alert for checkout
+    alert('Checkout completed. Thank you for your purchase!');
+}
+function goToHome() {
+    window.location.href = "homepage.html#home";
+}
+function goToCategory() {
+    window.location.href = "homepage.html#category";
+}
+function goToProducts() {
+    window.location.href = "homepage.html#products";
+}
+function goToServices() {
+    window.location.href = "homepage.html#services";
+}
+function goToContact() {
+    window.location.href = "homepage.html#contact";
+}
+
+
+    </script>
+</body>
+</html>
